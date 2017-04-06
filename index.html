@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tic Tac Toe</title>
+<script src="js/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="js/bootstrap.js"></script>
+<script src="js/myscript.js"></script>
+<link rel="stylesheet" href="css/mystyle.css">
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+<div id="header" style="width:100%;height:50px;margin-top:1vw" align="center">
+	<div style="width:100%;height:2px;background-color: lightgray" align="center"></div>
+	<h1 id="titleHeading" style="margin-bottom:15px;color:black">TicTacToe</h1>
+	<!--<p id="gameStatus"></p>-->
+	
+</div>
+
+
+<div id="firstPage" class="container" align="center" style="margin-top: 15vh">
+	<p>How big do you want to play?</p>
+	<input id="gridSize" type="text" class="form-control" style="width:30vw;border-radius: 0px;text-align: center">
+	<p id="gridSizeMessage" style="color:red"></p>
+	<div id="hardnessDiv">
+		<select id="hardness" class="btn dropdown-toggle" style="width:30vw;border-radius: 0px" type="button">
+			<option value="null">Select Hardness</option>
+		</select>
+		<div align="center">
+			<button id="playButton" class="btn-lg btn-success" style="width:30vw;border-radius: 0px">Play The Game</button>
+		</div>
+	</div>	
+</div>
+
+
+<div id="secondPage" class="container" align="center" style="margin-top:8vh">	
+		<div>
+			<input id="player1Go" class="btn btn-lg" type="button" value="Player 1"/>
+			<input id="player2Go" class="btn btn-lg" type="button" value="Player 2"/>
+			<!--div  style="background-color: lightgray;color:white;border-radius: 10px; width:8vw; height:2vw; font-size: 50%; display:inline-block;padding-top: .6%">
+				<p >Player 1</p>
+			</div>
+			<div id="player2Go" style="background-color: lightgray;color:white;border-radius: 10px; width:8vw; height:2vw; font-size: 50%; display:inline-block;padding-top: .6%">
+				<p >Player 2</p>
+			</div-->
+		</div>	
+		<div id="grid" style="margin-top:1vw; padding-top: 2vw; padding-bottom: 2vw">
+			<!--grid will be generated here -->			
+		</div>		
+</div>
+
+<div id="thirdPage" class="container" align="center" style="width:50vw;background-color:lightgray; height:50vh;margin-top:4vw;border-radius: 30px">
+	<div align="center" style="margin-top: 2vw;margin-bottom:1vw">
+		<h1 style="font-size: 25px;">Game Over</h1>
+		<h2 style="font-size: 20px;font-weight: bold" id="winnerAnnouncement"></h2>
+		<div style="margin-top: 1vw">
+			<!--div id="retry" style="background-color: orange;color:white;border-radius: 10px; width:15vw; height:4vw; font-size: 50%; display:inline-block;padding-top: .7%;">
+				<button style="font-size:20px;border: none;background-color: inherit">Retry</button>
+			</div>
+			<div id="restart" style="background-color: forestgreen;color:white;border-radius: 10px; width:15vw; height:4vw; font-size: 50%; display:inline-block;padding-top: .7%">
+				<button style="font-size:20px;border: none;background-color: inherit;">Restart</button>
+			</div-->
+			<input id="retry" class="btn btn-lg btn-warning" type="button" value="Retry"/>
+			<input id="restart" class="btn btn-lg btn-success" type="button" value="Restart"/>
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+
+</html>

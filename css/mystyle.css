@@ -1,0 +1,21 @@
+.block{
+	background-color: #D9D9D9;
+}
+
+.inline-row{
+	display: inline-block;
+}
+
+.round{
+	background-image: url("../assets/circle.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.cross{
+	background-image: url("../assets/cross.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
