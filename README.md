@@ -1,5 +1,4 @@
 # Tic Tac Toe
-A simple Tic Tac To game with js, jQuery and Bootsrap
+A simple Tic Tac Toe game with js, jQuery and Bootstrap
 
 Please visit for live demo: https://dhrubo-tictactoe.000webhostapp.com/
-
