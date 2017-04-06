@@ -16,15 +16,11 @@ $(document).ready(function(){
 	
 	var isComposedSomething=false;
 
-	var saveRequest=function(e) {
-		if(isComposedSomething){
-			return "আপনি পত্র সংরক্ষিত হয় নাই ।  অন্য পেজে যেতে চাইলে Leave this page -তে ক্লিক করুন । ";
-		}else{
-			return;
-		}
+	var saveRequest=function() {
+		return "আপনি পত্র সংরক্ষিত হয় নাই ।  অন্য পেজে যেতে চাইলে Leave this page -তে ক্লিক করুন । ";
 	};
 	function windowBeforeUnload(){
-		return confirm("আপনার  পত্র সংরক্ষিত হয় নাই । অন্য পেজে যেতে চাইলে OK -তে ক্লিক করুন । ");
+		return confirm("আপনার  পত্র সংরক্ষিত হয় নাই । অন্য পেজে যেতে চাইলে OK -তে ক্লিক করুন । ");
 	}
 	window.onbeforeunload = saveRequest;
 	
@@ -34,7 +30,7 @@ $(document).ready(function(){
 	function populateHardness(){
 		var gridSize=$("#gridSize").val();
 		var i;
-		$("#hardness").html("");
+		$("#hardness").html("<option value='null'>Select Hardness</option>");
 		for (i=3;i<=gridSize;i++){
 			$("#hardness").append("<option value='"+i+"'>"+i+"</option>");
 		}
@@ -42,8 +38,10 @@ $(document).ready(function(){
 	
 	function drawGrid(){
 		var gridSize=$("#gridSize").val();
-		var blockWidth=800-400*Math.pow(Math.E,-(parseInt(gridSize)*(0.05))); 
+		var blockWidth=800-650*Math.pow(Math.E,-(parseInt(gridSize)*(0.05))); 
 		var marginWidth=30/gridSize;
+		
+		$("#grid").html("");
 		
 		var i,j;
 		for (i=1;i<=gridSize;i++){
@@ -398,6 +396,7 @@ $(document).ready(function(){
 		$("#gameStatus").text("");
 		$("#player2Go").css("background-color", "lightgray");
 		$("#player1Go").css("background-color", "orange");
+		var isComposedSomething=false;
 	}
 	
 	function clearUpForRestart(){
@@ -521,6 +520,7 @@ $(document).ready(function(){
 				$("#gameStatus").text("Game Over");
 				$("#secondPage").slideUp();
 				$("#thirdPage").show();
+				//clearUpForRetry();
 				//$("#thirdPage").css("z-index",999);
 				//$("#thirdPage").css("position","fixed");
 				if(winner=="none"){
